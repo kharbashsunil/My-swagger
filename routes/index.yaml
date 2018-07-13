@@ -1,0 +1,75 @@
+---
+info:
+  title: Node Swagger API
+  version: 1.0.1
+  description: Demonstrating how to desribe a RESTful API with Swagger
+host: localhost:3000
+basePath: "/"
+swagger: '2.0'
+paths:
+  "/api/puppies":
+    get:
+      tags:
+      - Puppies
+      description: Returns all puppies
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: An array of puppies
+          schema:
+            "$ref": "#/definitions/Puppy"
+definitions:
+  Puppy:
+            properties:
+               groupname:
+                 type: string
+               description:
+                 type: string                
+               members:
+                type: array
+                items:
+                 type: number
+responses: {}
+parameters: {}
+securityDefinitions: {}
+tags: []
+
+
+
+# ---
+# info:
+#   title: Node Swagger API
+#   version: 1.0.1
+#   description: Demonstrating how to desribe a RESTful API with Swagger
+# host: localhost:3000
+# basePath: "/"
+# swagger: '2.0'
+# paths:
+#   "/api/puppies":
+#     get:
+#       tags:
+#       - Puppies
+#       description: Returns all puppies
+#       produces:
+#       - application/json
+#       responses:
+#         '200':
+#           description: An array of puppies
+#           schema:
+#             "$ref": "#/definitions/Puppy"
+# definitions:
+#   Puppy:
+#             properties:
+#                groupname:
+#                  type: string
+#                description:
+#                  type: string                
+#                members:
+#                 type: array
+#                 items:
+#                  type: number
+# responses: {}
+# parameters: {}
+# securityDefinitions: {}
+# tags: []
