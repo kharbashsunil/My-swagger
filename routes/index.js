@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var db = require('../mysql_query/query.js');
+
 
 /**
  * @swagger
@@ -51,8 +53,7 @@ var router = express.Router();
  *         schema:
  *           $ref: '#/definitions/Puppy'
  */
-router.get('/api/puppies',(req,res)=>{
-  
-});
+
+router.get('/api/puppies',db.getAllPuppies);
 
 module.exports = router;
