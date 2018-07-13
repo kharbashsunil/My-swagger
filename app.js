@@ -15,7 +15,7 @@ var swaggerDefinition = {
   info: {
     title: 'Node Swagger API',
     version: '1.0.1',
-    description: 'Demonstrating how to desribe a RESTful API with Swagger',
+    description: "http://localhost:3000/api/puppies'Demonstrating how to desribe a RESTful API with Swagger'",
   },
   host: 'localhost:3000',
   basePath: '/',
@@ -39,7 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 // app.use('/', routes);
 
